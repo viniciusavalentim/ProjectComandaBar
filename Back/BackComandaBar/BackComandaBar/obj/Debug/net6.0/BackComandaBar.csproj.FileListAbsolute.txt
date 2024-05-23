@@ -30,3 +30,16 @@ C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\obj\Debug\net6.
 C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\obj\Debug\net6.0\BackComandaBar.pdb
 C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\obj\Debug\net6.0\BackComandaBar.genruntimeconfig.cache
 C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\obj\Debug\net6.0\ref\BackComandaBar.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\DnsClient.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\SharpCompress.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\Snappier.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\ZstdSharp.dll
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\PROJECTS\ProjetoComandaBar\Back\BackComandaBar\BackComandaBar\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
