@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackComandaBar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+458346ee134cb428417ef2348b23d154ddc13665")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c3cd69e29ea30faf6759efe90f796d313f80f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackComandaBar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackComandaBar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

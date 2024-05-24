@@ -1213,11 +1213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\ProjectComandaBar\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\BackComandaBar.csproj",
+      "projectUniqueName": "C:\\projects\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\BackComandaBar.csproj",
       "projectName": "BackComandaBar",
-      "projectPath": "C:\\projects\\ProjectComandaBar\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\BackComandaBar.csproj",
+      "projectPath": "C:\\projects\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\BackComandaBar.csproj",
       "packagesPath": "C:\\Users\\Valen\\.nuget\\packages\\",
-      "outputPath": "C:\\projects\\ProjectComandaBar\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\obj\\",
+      "outputPath": "C:\\projects\\ProjectComandaBar\\Back\\BackComandaBar\\BackComandaBar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

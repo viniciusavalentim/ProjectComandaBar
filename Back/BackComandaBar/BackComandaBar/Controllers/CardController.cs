@@ -11,8 +11,6 @@ namespace BackComandaBar.Controllers
     public class CardController : ControllerBase
     {
         private readonly CardService _cardService;
-
-
         public CardController(CardService cardService) =>
             _cardService = cardService;
 
