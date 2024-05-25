@@ -5,7 +5,7 @@ const PROXY_CONFIG = [
             '/Card'
 
         ],
-        target: "https://localhost:7269",
+        target: "https://localhost:7080",
         secure: false,
         changeOrigin: true,
         pathRewrite: {
