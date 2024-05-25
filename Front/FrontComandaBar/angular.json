@@ -63,7 +63,8 @@
               "browserTarget": "FrontComandaBar:build:production"
             },
             "development": {
-              "browserTarget": "FrontComandaBar:build:development"
+              "browserTarget": "FrontComandaBar:build:development",
+              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"

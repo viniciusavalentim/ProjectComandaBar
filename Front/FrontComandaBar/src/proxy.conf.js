@@ -2,7 +2,6 @@ const PROXY_CONFIG = [
     {
         context: [
             '/api',
-            '/Card'
 
         ],
         target: "https://localhost:7080",
