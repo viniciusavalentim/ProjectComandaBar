@@ -1,0 +1,7 @@
+.main-container > .card-container > .main-card > .info-product{
+    display: flex;
+}
+
+.main-container > .card-container > .footer-card{
+    display: flex;
+}

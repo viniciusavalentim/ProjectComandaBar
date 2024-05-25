@@ -1,5 +1,6 @@
 using BackComandaBar.Database;
 using BackComandaBar.Services.CardService;
+using BackComandaBar.Services.ProductService;
 
 namespace BackComandaBar
 {
@@ -19,6 +20,8 @@ namespace BackComandaBar
 
 
             builder.Services.AddSingleton<CardService>();
+            builder.Services.AddSingleton<ProductService>();
+
 
             var app = builder.Build();
 
