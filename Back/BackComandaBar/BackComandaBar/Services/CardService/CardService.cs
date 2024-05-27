@@ -8,6 +8,8 @@ namespace BackComandaBar.Services.CardService
     public class CardService
     {
         private readonly IMongoCollection<CardModel> _cardCollection;
+        private readonly IMongoCollection<CardModel> _cardClosedCollection;
+
 
         public CardService(
             IOptions<ComandaBarDatabaseSettings> comandaBarDatabaseSettings)
@@ -20,6 +22,10 @@ namespace BackComandaBar.Services.CardService
 
             _cardCollection = mongoDatabase.GetCollection<CardModel>(
                 comandaBarDatabaseSettings.Value.ComandaBarCollectionName);
+
+
+            _cardClosedCollection = mongoDatabase.GetCollection<CardModel>(
+                comandaBarDatabaseSettings.Value.CardClosedCollectionName);
         }
 
 
@@ -88,6 +94,9 @@ namespace BackComandaBar.Services.CardService
         }
         public async Task CreateAsync(CardModel newCard) =>
             await _cardCollection.InsertOneAsync(newCard);
+
+        public async Task CreateCardClosed(CardModel newCard) =>
+         await _cardClosedCollection.InsertOneAsync(newCard);
 
     }
 }

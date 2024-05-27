@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
 
   constructor(private cardSercice: CardService) {}
   ngOnInit(): void {
-    this.cardSercice.GetCards().subscribe(data =>{
+    this.cardSercice.getCards().subscribe(data =>{
       this.cards = data;
     });
   }

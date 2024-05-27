@@ -1,10 +1,47 @@
-<div>
-    <button>+</button>
-</div>
 
 <main>
+  
+
     <section>
-        <app-card></app-card>
+        <div>
+            <button (click)="addComanda()">Adicionar Comanda</button>
+            <div *ngFor="let comanda of comandas; let i = index">
+              <h3>{{ comanda.name }}</h3>
+          
+              <input
+                type="text"
+                placeholder="Buscar Produto"
+                [(ngModel)]="searchText"
+                (input)="searchProduct($event)"
+              />
+              <ul *ngIf="searchText">
+                <li
+                  *ngFor="let produto of produtos"
+                  (click)="selectProduto(produto)"
+                  style="cursor: pointer"
+                >
+                  {{ produto.name }} - {{ produto.price | currency: 'BRL' }}
+                </li>
+              </ul>
+          
+              <button (click)="addItem(i)" [disabled]="!selectedProduto">Adicionar Item</button>
+          
+              <div *ngFor="let item of comanda.products; let j = index">
+                <span>{{ item.name }}</span>
+                <button (click)="updateItem(i, j, false)" [disabled]="item.quantity <= 1">-</button>
+                <span>{{ item.quantity }}</span>
+                <button (click)="updateItem(i, j, true)">+</button>
+                <span>{{ item.price | currency: 'BRL' }}</span>
+                <button (click)="deleteItem(i, j)">Deletar Item</button>
+              </div>
+              <div>
+                <span>Total: {{ comanda.totalPrice | currency: 'BRL' }}</span>
+              </div>
+              <button (click)="deleteComanda(i)">Fechar Comanda</button>
+            </div>
+          </div>
     </section>
+
+
 </main>
 

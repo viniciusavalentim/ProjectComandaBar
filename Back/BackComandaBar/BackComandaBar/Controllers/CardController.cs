@@ -33,6 +33,12 @@ namespace BackComandaBar.Controllers
             await _cardService.CreateAsync(newCard);
             return newCard;
         }
+        [HttpPost("Closed")]
+        public async Task<CardModel> PostCardClosed(CardModel newCard)
+        {
+            await _cardService.CreateCardClosed(newCard);
+            return newCard;
+        }
 
         [HttpPut("{id}")]
         public async Task<CardModel> UpdateCard(string id, CardModel newCard)

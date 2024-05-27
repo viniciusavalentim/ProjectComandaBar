@@ -13,7 +13,19 @@ export class CardService{
 
   constructor(private http: HttpClient) { }
 
-  GetCards() : Observable<Card[]>{
+  getCards() : Observable<Card[]>{
     return this.http.get<Card[]>(this.apiUrl);
+  }
+
+  addComanda(card: Card): Observable<Card> {
+    return this.http.post<any>(this.apiUrl, card);
+  }
+
+  updateComanda(card: Card): Observable<Card> {
+    return this.http.put<any>(`${this.apiUrl}/${card.id}`, card);
+  }
+
+  deleteComanda(id: string): Observable<Card> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }

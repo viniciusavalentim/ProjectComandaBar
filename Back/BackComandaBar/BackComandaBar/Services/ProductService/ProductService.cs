@@ -22,6 +22,22 @@ namespace BackComandaBar.Services.ProductService
                 comandaBarDatabaseSettings.Value.ProductCollectionName);
         }
 
+        public async Task<List<ProductModel>> GetProducts()
+        {
+            List<ProductModel> products = new List<ProductModel>();
+
+            try
+            {
+                products = await _productCollection.Find(x => true).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+            return products;
+        }
+
 
         public async Task CreateAsync(ProductModel newProduct) =>
             await _productCollection.InsertOneAsync(newProduct);
