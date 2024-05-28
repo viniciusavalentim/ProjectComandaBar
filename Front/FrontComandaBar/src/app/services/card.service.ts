@@ -21,6 +21,10 @@ export class CardService{
     return this.http.post<any>(this.apiUrl, card);
   }
 
+  addCardClosed(card: Card): Observable<Card> {
+    return this.http.post<any>(`${this.apiUrl}/Closed`, card);
+  }
+
   updateComanda(card: Card): Observable<Card> {
     return this.http.put<any>(`${this.apiUrl}/${card.id}`, card);
   }

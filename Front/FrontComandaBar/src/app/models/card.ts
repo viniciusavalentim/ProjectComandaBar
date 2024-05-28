@@ -5,4 +5,6 @@ export interface Card{
     name: string;
     totalPrice: number;
     products: Products[];
+    searchText: any;
+
 }

@@ -7,6 +7,7 @@ import { CardComponent } from './Components/card/card.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxAwesomePopupModule, DialogConfigModule, ConfirmBoxConfigModule, ToastNotificationConfigModule } from '@costlydeveloper/ngx-awesome-popup';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxAwesomePopupModule,
+    DialogConfigModule,
+    ConfirmBoxConfigModule,
+    ToastNotificationConfigModule,
+    NgxAwesomePopupModule.forRoot(),
+    DialogConfigModule.forRoot(), 
+    ConfirmBoxConfigModule.forRoot(), 
+    ToastNotificationConfigModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
