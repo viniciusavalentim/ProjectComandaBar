@@ -29,6 +29,7 @@ namespace BackComandaBar.Services.ProductService
             try
             {
                 products = await _productCollection.Find(x => true).ToListAsync();
+
             }
             catch (Exception ex)
             {

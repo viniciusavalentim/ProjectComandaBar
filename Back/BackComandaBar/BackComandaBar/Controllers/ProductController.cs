@@ -19,6 +19,7 @@ namespace BackComandaBar.Controllers
         [HttpGet]
         public async Task<ActionResult<List<ProductModel>>> GetCards()
         {
+ 
             return Ok(await _productService.GetProducts());
         }
 
