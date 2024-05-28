@@ -59,12 +59,25 @@ namespace BackComandaBar.Services.CardService
         {
             try
             {
-               ReplaceOneResult replace = await _cardCollection.ReplaceOneAsync(x => x.Id == id, card);
-               
+                if (card.Id != id)
+                {
+                    throw new ArgumentException("O campo _id não pode ser alterado.");
+                }
+
+                var filter = Builders<CardModel>.Filter.Eq(x => x.Id, id);
+
+                var result = await _cardCollection.ReplaceOneAsync(filter, card);
+
+                if (result.ModifiedCount == 0)
+                {
+                    throw new InvalidOperationException("Nenhum documento foi atualizado.");
+                }
+
             }
             catch (Exception ex)
             {
-                ex.ToString();
+                Console.WriteLine($"Ocorreu um erro durante a atualização: {ex}");
+                throw;
             }
 
             return card;

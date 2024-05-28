@@ -35,9 +35,21 @@ namespace BackComandaBar.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<CardModel> UpdateCard(string id, CardModel newCard)
+        public async Task<ActionResult<CardModel>> UpdateCard(string id, CardModel newCard)
         {
-            return await _cardService.UpdateCard(id, newCard);
+            try
+            {
+                var updatedCard = await _cardService.UpdateCard(id, newCard);
+                return Ok(updatedCard);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest("Nenhum documento foi atualizado.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Ocorreu um erro durante a atualização do cartão.");
+            }
         }
 
         [HttpDelete("{id}")]
