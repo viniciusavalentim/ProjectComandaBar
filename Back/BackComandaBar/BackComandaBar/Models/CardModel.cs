@@ -13,5 +13,6 @@ namespace BackComandaBar.Models
         public string? Name { get; set; }
         public double TotalPrice { get; set; }
         public List<ProductModel>? Products { get; set; }
+        public DateTime? Date { get; set; }
     }
 }

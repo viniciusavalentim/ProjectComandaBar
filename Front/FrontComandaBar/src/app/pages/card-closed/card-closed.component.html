@@ -1,0 +1,45 @@
+
+<section class="section-add-comanda">
+    <button routerLink="">Voltar</button>
+</section>
+  
+  <section class="container">
+  
+      <div class="card-container" *ngFor="let comanda of cardsClosed; let i = index">
+        
+        <div class="head-container">
+          <h3 class="title-card">{{ comanda.name }}</h3>
+        </div>
+  
+        <hr>
+  
+        <div class="main-container">
+          <div class="meio-container" *ngFor="let item of comanda.products; let j = index">
+            <div class="main-container-title">
+              <h5>{{ item.name }}</h5>
+            </div>
+            <div class="main-container-value">
+
+              <span>{{ item.quantity }}</span>
+
+              <span>{{ item.price | currency: 'BRL' }}</span>
+   
+            </div>
+      
+          </div>
+        </div>
+  
+        <hr class="second-hr">
+  
+        <div class="footer-container">
+          <span>Total:</span>
+          <span>{{ comanda.totalPrice | currency: 'BRL' }}</span>
+        </div>
+  
+      </div>
+  
+  </section>
+  
+  
+  
+  

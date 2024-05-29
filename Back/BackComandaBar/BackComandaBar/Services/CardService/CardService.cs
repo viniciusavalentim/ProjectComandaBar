@@ -105,8 +105,27 @@ namespace BackComandaBar.Services.CardService
 
             return card;
         }
-        public async Task CreateAsync(CardModel newCard) =>
+        public async Task CreateAsync(CardModel newCard)
+        {
+            newCard.Date = DateTime.Now;    
             await _cardCollection.InsertOneAsync(newCard);
+        }
+
+        public async Task<List<CardModel>> GetCardsClosed()
+        {
+            List<CardModel> cards = new List<CardModel>();
+
+            try
+            {
+                cards = await _cardClosedCollection.Find(x => true).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+            return cards;
+        }
 
         public async Task CreateCardClosed(CardModel newCard)
         {

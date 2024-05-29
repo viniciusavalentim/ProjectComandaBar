@@ -39,7 +39,12 @@ export class CardComponent implements OnInit {
   addComanda(): void {
     const name = prompt('Digite o nome da comanda:');
     if(name){
-      const novaComanda: Card = { name: name, totalPrice: 0, products: [], searchText: '' };
+      const novaComanda: Card = { 
+        name: name, 
+        totalPrice: 0, 
+        products: [], 
+        searchText: '', 
+        date: null};
       this.comandaService.addComanda(novaComanda).subscribe(() => {
         this.carregarComandas();
       });
@@ -133,7 +138,7 @@ export class CardComponent implements OnInit {
   deleteComanda(index: number, card: Card): void {
     const newConfirmBox = new ConfirmBoxInitializer();
 
-    newConfirmBox.setTitle('CONFIRMAR FECHAMENTO DE COMANDA');
+    newConfirmBox.setTitle(`VALOR TOTAL R$ ${card.totalPrice}`);
     newConfirmBox.setMessage('Você tem certeza que deseja fechar essa comanda?');
 
     // Choose layout color type

@@ -16,6 +16,10 @@ export class CardService{
   getCards() : Observable<Card[]>{
     return this.http.get<Card[]>(this.apiUrl);
   }
+  
+  getCardsClosed() : Observable<Card[]>{
+    return this.http.get<Card[]>(`${this.apiUrl}/Closed`);
+  }
 
   addComanda(card: Card): Observable<Card> {
     return this.http.post<any>(this.apiUrl, card);

@@ -6,5 +6,5 @@ export interface Card{
     totalPrice: number;
     products: Products[];
     searchText: any;
-
+    date: Date | null;
 }

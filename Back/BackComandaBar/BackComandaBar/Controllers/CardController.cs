@@ -21,6 +21,13 @@ namespace BackComandaBar.Controllers
             return Ok(await _cardService.GetCards());
         }
 
+        [HttpGet("Closed")]
+        public async Task<ActionResult<List<CardModel>>> GetCardsClosed()
+        {
+            return Ok(await _cardService.GetCardsClosed());
+        }
+
+
         [HttpGet("{id}")]
         public async Task<ActionResult<CardModel>> GetCard(string id)
         {
